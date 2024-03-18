@@ -6,6 +6,10 @@
 #include "GameFramework/GameModeBase.h"
 #include "Galaga_USFX_LAB2GameMode.generated.h"
 
+class ANaveEnemiga;
+class ANaveEnemigaCaza;
+
+
 UCLASS(MinimalAPI)
 class AGalaga_USFX_LAB2GameMode : public AGameModeBase
 {
@@ -13,6 +17,14 @@ class AGalaga_USFX_LAB2GameMode : public AGameModeBase
 
 public:
 	AGalaga_USFX_LAB2GameMode();
+protected:
+	virtual void BeginPlay() override;
+
+public:
+	//TArray<ANaveEnemiga*> TANavesEnemigas;
+	TArray<ANaveEnemigaCaza*> TANavesEnemigasCaza;
+
+	//TMap<FString, ANaveEnemiga*> DiferenciaNaves;
 };
 
 
