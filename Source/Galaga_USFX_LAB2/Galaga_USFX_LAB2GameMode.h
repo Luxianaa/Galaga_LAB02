@@ -8,6 +8,7 @@
 
 class ANaveEnemiga;
 class ANaveEnemigaCaza;
+class ANaveEnemigaEspia;
 
 
 UCLASS(MinimalAPI)
@@ -23,6 +24,7 @@ protected:
 public:
 	//TArray<ANaveEnemiga*> TANavesEnemigas;
 	TArray<ANaveEnemigaCaza*> TANavesEnemigasCaza;
+	TArray<ANaveEnemigaEspia*> TANavesEnemigasEspia;
 
 	//TMap<FString, ANaveEnemiga*> DiferenciaNaves;
 };
