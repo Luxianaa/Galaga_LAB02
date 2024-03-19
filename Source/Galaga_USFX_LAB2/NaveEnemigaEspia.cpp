@@ -6,7 +6,7 @@
 
 ANaveEnemigaEspia::ANaveEnemigaEspia()
 {
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> malla(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_NarrowCapsule.Shape_NarrowCapsule'"));
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> malla(TEXT("StaticMesh'/Game/StarterContent/Props/SM_Bush.SM_Bush'"));
 	mallaNaveEnemiga->SetStaticMesh(malla.Object);
 	VelocidadMovimiento *= 0.5f;
 }
