@@ -14,11 +14,7 @@ class GALAGA_USFX_LAB2_API ANaveEnemigaEspia : public ANaveEnemiga
 {
 	GENERATED_BODY()
 protected:
-	float Radio = 100.0f; // Radio de la circunferencia
-	float Angulo = 0.0f; // Ángulo inicial
-	float Speed = 6.0f; // Velocidad de rotación
-	float VelocidadMovimiento = 100.0f;
-	FVector Direction = FVector(0.0f, 0.0f, 1.0f);
+	
 
 
 protected:
