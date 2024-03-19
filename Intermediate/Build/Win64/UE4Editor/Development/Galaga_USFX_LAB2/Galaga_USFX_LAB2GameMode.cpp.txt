@@ -19,3 +19,5 @@ C:\Users\lucia\Desktop\Trabajos Unreal\Galaga_USFX_LAB2\Source\Galaga_USFX_LAB2\
 C:\Users\lucia\Desktop\Trabajos Unreal\Galaga_USFX_LAB2\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB2\NaveEnemigaCaza.generated.h
 C:\Users\lucia\Desktop\Trabajos Unreal\Galaga_USFX_LAB2\Source\Galaga_USFX_LAB2\NaveEnemigaEspia.h
 C:\Users\lucia\Desktop\Trabajos Unreal\Galaga_USFX_LAB2\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB2\NaveEnemigaEspia.generated.h
+C:\Users\lucia\Desktop\Trabajos Unreal\Galaga_USFX_LAB2\Source\Galaga_USFX_LAB2\NaveEnemigaTransporte.h
+C:\Users\lucia\Desktop\Trabajos Unreal\Galaga_USFX_LAB2\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB2\NaveEnemigaTransporte.generated.h

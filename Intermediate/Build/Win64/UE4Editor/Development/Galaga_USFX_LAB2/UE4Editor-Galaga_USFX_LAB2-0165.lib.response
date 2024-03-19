@@ -1,0 +1,27 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-Galaga_USFX_LAB2-0165.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\lucia\Desktop\Trabajos Unreal\Galaga_USFX_LAB2\Intermediate\Build\Win64\Galaga_USFX_LAB2Editor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"C:\Users\lucia\Desktop\Trabajos Unreal\Galaga_USFX_LAB2\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_LAB2\Galaga_USFX_LAB2.cpp.obj"
+"C:\Users\lucia\Desktop\Trabajos Unreal\Galaga_USFX_LAB2\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_LAB2\Galaga_USFX_LAB2GameMode.cpp.obj"
+"C:\Users\lucia\Desktop\Trabajos Unreal\Galaga_USFX_LAB2\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_LAB2\Galaga_USFX_LAB2Pawn.cpp.obj"
+"C:\Users\lucia\Desktop\Trabajos Unreal\Galaga_USFX_LAB2\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_LAB2\Galaga_USFX_LAB2Projectile.cpp.obj"
+"C:\Users\lucia\Desktop\Trabajos Unreal\Galaga_USFX_LAB2\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_LAB2\NaveEnemiga.cpp.obj"
+"C:\Users\lucia\Desktop\Trabajos Unreal\Galaga_USFX_LAB2\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_LAB2\NaveEnemigaCaza.cpp.obj"
+"C:\Users\lucia\Desktop\Trabajos Unreal\Galaga_USFX_LAB2\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_LAB2\NaveEnemigaEspia.cpp.obj"
+"C:\Users\lucia\Desktop\Trabajos Unreal\Galaga_USFX_LAB2\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_LAB2\NaveEnemigaTransporte.cpp.obj"
+"C:\Users\lucia\Desktop\Trabajos Unreal\Galaga_USFX_LAB2\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_LAB2\Galaga_USFX_LAB2.init.gen.cpp.obj"
+"C:\Users\lucia\Desktop\Trabajos Unreal\Galaga_USFX_LAB2\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_LAB2\Galaga_USFX_LAB2GameMode.gen.cpp.obj"
+"C:\Users\lucia\Desktop\Trabajos Unreal\Galaga_USFX_LAB2\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_LAB2\Galaga_USFX_LAB2Pawn.gen.cpp.obj"
+"C:\Users\lucia\Desktop\Trabajos Unreal\Galaga_USFX_LAB2\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_LAB2\Galaga_USFX_LAB2Projectile.gen.cpp.obj"
+"C:\Users\lucia\Desktop\Trabajos Unreal\Galaga_USFX_LAB2\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_LAB2\NaveEnemiga.gen.cpp.obj"
+"C:\Users\lucia\Desktop\Trabajos Unreal\Galaga_USFX_LAB2\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_LAB2\NaveEnemigaCaza.gen.cpp.obj"
+"C:\Users\lucia\Desktop\Trabajos Unreal\Galaga_USFX_LAB2\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_LAB2\NaveEnemigaEspia.gen.cpp.obj"
+"C:\Users\lucia\Desktop\Trabajos Unreal\Galaga_USFX_LAB2\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_LAB2\NaveEnemigaTransporte.gen.cpp.obj"
+"C:\Users\lucia\Desktop\Trabajos Unreal\Galaga_USFX_LAB2\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_LAB2\Default.rc2.res"
+/OUT:"C:\Users\lucia\Desktop\Trabajos Unreal\Galaga_USFX_LAB2\Intermediate\Build\Win64\UE4Editor\Development\Galaga_USFX_LAB2\UE4Editor-Galaga_USFX_LAB2-0165.lib"

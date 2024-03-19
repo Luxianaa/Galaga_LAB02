@@ -5,6 +5,7 @@
 #include "NaveEnemiga.h"
 #include "NaveEnemigaCaza.h"
 #include "NaveEnemigaEspia.h"
+#include "NaveEnemigaTransporte.h"
 
 AGalaga_USFX_LAB2GameMode::AGalaga_USFX_LAB2GameMode()
 {
@@ -45,7 +46,7 @@ void AGalaga_USFX_LAB2GameMode::BeginPlay()
 	//	
 	//	
 	//}
-
+	FVector ubicacionInicialNaves02 = FVector(700.0f, 10.0f, 200.0f); 
 	FVector ubicacionInicialNaves = FVector(100.0f, -20.0f, 200.f);
 	FRotator rotacionNave = FRotator(0.0f, 0.0f, 0.0f);
 
@@ -60,7 +61,6 @@ void AGalaga_USFX_LAB2GameMode::BeginPlay()
 			//DiferenciaNaves.Add("Nave01", NaveEnemigaCazaActual);
 			//DiferenciaNaves["Nave01"]->SetVelocidad(100);
 		}
-
 		ubicacionInicialNaves.Y = ubicacionInicialNaves.Y - 100.0f ;
 		for (int j = 0; j < 5; j++) {
 			ubicacionActual.Y= ubicacionActual.X - 300.0f * j;//modify the distance beetwen the same 5 objs
@@ -69,7 +69,17 @@ void AGalaga_USFX_LAB2GameMode::BeginPlay()
 			ANaveEnemigaEspia* NaveEnemigaEspiaActual = World->SpawnActor<ANaveEnemigaEspia>(ubicacionActual, rotacionNave);
 			TANavesEnemigasEspia.Add(NaveEnemigaEspiaActual);
 
+			//ANaveEnemigaTransporte* NaveEnemigaTransporteActual = World->SpawnActor<ANaveEnemigaCaza>(ubicacionActual, rotacionNave);
+			
 		}
+		FVector ubicacionActual02 = ubicacionInicialNaves02;
+			for (int k = 0; k < 5; ++k)
+			{
+				ubicacionActual02 = FVector(ubicacionActual02.X, ubicacionActual02.Y, ubicacionActual02.Z+ 100* k);
+				ANaveEnemigaTransporte* NaveEnemigaTransporteActual = World->SpawnActor<ANaveEnemigaTransporte>(ubicacionActual02, rotacionNave);   
+				TANavesEnemigasTransporte.Add(NaveEnemigaTransporteActual); 
+
+			}
 	}
 }
 

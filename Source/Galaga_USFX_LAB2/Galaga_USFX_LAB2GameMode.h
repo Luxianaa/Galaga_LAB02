@@ -9,6 +9,7 @@
 class ANaveEnemiga;
 class ANaveEnemigaCaza;
 class ANaveEnemigaEspia;
+class ANaveEnemigaTransporte;
 
 
 UCLASS(MinimalAPI)
@@ -25,7 +26,7 @@ public:
 	TArray<ANaveEnemiga*> TANavesEnemigas;
 	TArray<ANaveEnemigaCaza*> TANavesEnemigasCaza;
 	TArray<ANaveEnemigaEspia*> TANavesEnemigasEspia;
-
+	TArray<ANaveEnemigaTransporte*>TANavesEnemigasTransporte;
 	//TMap<int32, TArray<ANaveEnemigaCaza*>> ColumnaNavesEnemigasCaza;
 };
 
