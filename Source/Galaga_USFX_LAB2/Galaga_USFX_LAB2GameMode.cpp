@@ -15,36 +15,36 @@ AGalaga_USFX_LAB2GameMode::AGalaga_USFX_LAB2GameMode()
 void AGalaga_USFX_LAB2GameMode::BeginPlay()
 {
 	Super::BeginPlay();
-	
-	const int32 NumeroDeColumnas = 5;
-	const int32 NumeroDeFilas = 5;
 
-	for (int32 Columna = 0; Columna < NumeroDeColumnas; ++Columna)
-	{
-		TArray<ANaveEnemigaCaza*>NavesEnColumna;
-		for (int32 Fila = 0; Fila < NumeroDeFilas;++Fila) 
-		{ 
-			FVector SpawnLocation = FVector(Columna * 200.0f,Fila *200.0f, 350.0f);
-			FRotator SpwanRotation = FRotator::ZeroRotator;
+	//const int32 NumeroDeColumnas = 5;
+	//const int32 NumeroDeFilas = 5;
 
-			ANaveEnemigaCaza* NuevaNaveCaza = GetWorld()->SpawnActor<ANaveEnemigaCaza>(SpawnLocation, SpwanRotation);
-			if (NuevaNaveCaza)
-			{
-				//
-			}
-			else
-			{
-				UE_LOG(LogTemp, Error, TEXT("No se puede crear NE caza. "));
+	//for (int32 Columna = 0; Columna < NumeroDeColumnas; ++Columna)
+	//{
+	//	TArray<ANaveEnemigaCaza*>NavesEnColumna;
+	//	for (int32 Fila = 0; Fila < NumeroDeFilas;++Fila) 
+	//	{ 
+	//		FVector SpawnLocation = FVector(Columna * 200.0f,Fila *200.0f, 350.0f);
+	//		FRotator SpwanRotation = FRotator::ZeroRotator;
 
-			}
-			NavesEnColumna.Add(NuevaNaveCaza);
+	//		ANaveEnemigaCaza* NuevaNaveCaza = GetWorld()->SpawnActor<ANaveEnemigaCaza>(SpawnLocation, SpwanRotation);
+	//		if (NuevaNaveCaza)
+	//		{
+	//			//
+	//		}
+	//		else
+	//		{
+	//			UE_LOG(LogTemp, Error, TEXT("No se puede crear NE caza. "));
 
-		}
-		ColumnaNavesEnemigasCaza.Add(Columna, NavesEnColumna);
+	//		}
+	//		NavesEnColumna.Add(NuevaNaveCaza);
 
-		
-		
-	}
+	//	}
+	//	ColumnaNavesEnemigasCaza.Add(Columna, NavesEnColumna);
+
+	//	
+	//	
+	//}
 
 	FVector ubicacionInicialNaves = FVector(10.0f, -20.0f, 200.f);
 	FRotator rotacionNave = FRotator(0.0f, 0.0f, 0.0f);
@@ -61,16 +61,14 @@ void AGalaga_USFX_LAB2GameMode::BeginPlay()
 			//DiferenciaNaves["Nave01"]->SetVelocidad(100);
 		}
 
-		ubicacionInicialNaves.X = ubicacionInicialNaves.X - 300.0f;
-
-		for (int i = 0; i < 5; i++) {
-			ubicacionActual = FVector(ubicacionActual.X, ubicacionActual.Y + 300.0f + i, ubicacionActual.Z);
+		ubicacionInicialNaves.X = ubicacionInicialNaves.Y - 300.0f;
+		for (int j = 0; j < 5; j++) {
+			//ubicacionActual = FVector(ubicacionActual.X, ubicacionActual.Y + 300.0f + j, ubicacionActual.Z);
+			ubicacionActual.Y= ubicacionActual.X + 300.0f * j;
 			ANaveEnemigaEspia* NaveEnemigaEspiaActual = World->SpawnActor<ANaveEnemigaEspia>(ubicacionActual, rotacionNave);
 			TANavesEnemigasEspia.Add(NaveEnemigaEspiaActual);
-			//DiferenciaNaves.Add("Nave01", NaveEnemigaCazaActual);
-			//DiferenciaNaves["Nave01"]->SetVelocidad(100);
-		}
 
+		}
 	}
 }
 

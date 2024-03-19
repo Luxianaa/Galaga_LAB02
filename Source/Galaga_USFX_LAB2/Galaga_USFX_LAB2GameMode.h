@@ -22,11 +22,11 @@ protected:
 	virtual void BeginPlay() override;
 
 public:
-	//TArray<ANaveEnemiga*> TANavesEnemigas;
+	TArray<ANaveEnemiga*> TANavesEnemigas;
 	TArray<ANaveEnemigaCaza*> TANavesEnemigasCaza;
 	TArray<ANaveEnemigaEspia*> TANavesEnemigasEspia;
 
-	TMap<int32, TArray<ANaveEnemigaCaza*>> ColumnaNavesEnemigasCaza;
+	//TMap<int32, TArray<ANaveEnemigaCaza*>> ColumnaNavesEnemigasCaza;
 };
 
 

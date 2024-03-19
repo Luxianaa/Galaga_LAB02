@@ -6,8 +6,9 @@
 
 ANaveEnemigaEspia::ANaveEnemigaEspia()
 {
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> malla(TEXT("StaticMesh'/Game/StarterContent/Props/SM_Bush.SM_Bush'"));
+	static ConstructorHelpers::FObjectFinder<UStaticMesh> malla(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_NarrowCapsule.Shape_NarrowCapsule'"));
 	mallaNaveEnemiga->SetStaticMesh(malla.Object);
+	VelocidadMovimiento *= 0.5f;
 }
 
 void ANaveEnemigaEspia::BeginPlay()
@@ -23,13 +24,18 @@ void ANaveEnemigaEspia::Tick(float DeltaTime)
 
 void ANaveEnemigaEspia::Mover(float DeltaTime)
 {
-	Angulo += Speed * DeltaTime;
+	FVector PosicionActual = GetActorLocation();
 
-	// Calcula las nuevas posiciones en x y y
-	float NuevaX = GetActorLocation().X + Radio * FMath::Cos(Angulo) * DeltaTime;
-	float NuevaY = GetActorLocation().Y + Radio * FMath::Sin(Angulo) * DeltaTime;
+	//Angulo += Speed * DeltaTime;
+	float NuevaX = FMath::RandRange(-20.0f, 80.0f) * DeltaTime;
+	float NuevaY = FMath::RandRange(-20.0f, 80.0f) * DeltaTime;
+	float NuevaZ = FMath::RandRange(-20.0f, 80.0f) * DeltaTime;
+
 
 	// Establece la nueva posición
-	FVector NewLocation = FVector(NuevaX, NuevaY, GetActorLocation().Z);
-	SetActorLocation(NewLocation);
+	FVector NuevaPosicion = FVector(PosicionActual.X + NuevaX , PosicionActual.Y + NuevaY, PosicionActual.Z + NuevaZ);
+	SetActorLocation(NuevaPosicion);
+	//FVector NewLocation = GetActorLocation() + (Direction * VelocidadMovimiento * DeltaTime); 
+	//SetActorLocation(NewLocation); 
+
 }
