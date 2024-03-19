@@ -15,6 +15,36 @@ AGalaga_USFX_LAB2GameMode::AGalaga_USFX_LAB2GameMode()
 void AGalaga_USFX_LAB2GameMode::BeginPlay()
 {
 	Super::BeginPlay();
+	
+	const int32 NumeroDeColumnas = 5;
+	const int32 NumeroDeFilas = 5;
+
+	for (int32 Columna = 0; Columna < NumeroDeColumnas; ++Columna)
+	{
+		TArray<ANaveEnemigaCaza*>NavesEnColumna;
+		for (int32 Fila = 0; Fila < NumeroDeFilas;++Fila) 
+		{ 
+			FVector SpawnLocation = FVector(Columna * 200.0f,Fila *200.0f, 350.0f);
+			FRotator SpwanRotation = FRotator::ZeroRotator;
+
+			ANaveEnemigaCaza* NuevaNaveCaza = GetWorld()->SpawnActor<ANaveEnemigaCaza>(SpawnLocation, SpwanRotation);
+			if (NuevaNaveCaza)
+			{
+				//
+			}
+			else
+			{
+				UE_LOG(LogTemp, Error, TEXT("No se puede crear NE caza. "));
+
+			}
+			NavesEnColumna.Add(NuevaNaveCaza);
+
+		}
+		ColumnaNavesEnemigasCaza.Add(Columna, NavesEnColumna);
+
+		
+		
+	}
 
 	FVector ubicacionInicialNaves = FVector(10.0f, -20.0f, 200.f);
 	FRotator rotacionNave = FRotator(0.0f, 0.0f, 0.0f);

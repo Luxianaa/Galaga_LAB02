@@ -26,7 +26,7 @@ public:
 	TArray<ANaveEnemigaCaza*> TANavesEnemigasCaza;
 	TArray<ANaveEnemigaEspia*> TANavesEnemigasEspia;
 
-	//TMap<FString, ANaveEnemiga*> DiferenciaNaves;
+	TMap<int32, TArray<ANaveEnemigaCaza*>> ColumnaNavesEnemigasCaza;
 };
 
 
