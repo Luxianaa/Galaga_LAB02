@@ -27,15 +27,13 @@ void ANaveEnemigaEspia::Mover(float DeltaTime)
 	FVector PosicionActual = GetActorLocation();
 
 	//Angulo += Speed * DeltaTime;
-	float NuevaX = FMath::RandRange(-20.0f, 80.0f) * DeltaTime;
-	float NuevaY = FMath::RandRange(-20.0f, 80.0f) * DeltaTime;
+	float NuevaX = FMath::RandRange(-20.0f, 80.0f) * DeltaTime / 1000.0f;
+	float NuevaY = FMath::RandRange(-20.0f, 80.0f) * DeltaTime / 1000.0f;
 	float NuevaZ = FMath::RandRange(-20.0f, 80.0f) * DeltaTime;
 
 
 	// Establece la nueva posición
 	FVector NuevaPosicion = FVector(PosicionActual.X + NuevaX , PosicionActual.Y + NuevaY, PosicionActual.Z + NuevaZ);
 	SetActorLocation(NuevaPosicion);
-	//FVector NewLocation = GetActorLocation() + (Direction * VelocidadMovimiento * DeltaTime); 
-	//SetActorLocation(NewLocation); 
-
+	
 }

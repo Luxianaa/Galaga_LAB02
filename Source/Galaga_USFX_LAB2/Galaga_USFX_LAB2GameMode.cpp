@@ -61,10 +61,10 @@ void AGalaga_USFX_LAB2GameMode::BeginPlay()
 			//DiferenciaNaves["Nave01"]->SetVelocidad(100);
 		}
 
-		ubicacionInicialNaves.Y = ubicacionInicialNaves.X - 100.0f ;
+		ubicacionInicialNaves.Y = ubicacionInicialNaves.Y - 100.0f ;
 		for (int j = 0; j < 5; j++) {
-			ubicacionActual.Y= ubicacionActual.X + 300.0f * j;//modify the distance beetwen the same 5 objs
-			//ubicacionActual = FVector(ubicacionActual.X - 600.0f, ubicacionActual.Y + 300.0f + j, ubicacionActual.Z);
+			ubicacionActual.Y= ubicacionActual.X - 300.0f * j;//modify the distance beetwen the same 5 objs
+			
 
 			ANaveEnemigaEspia* NaveEnemigaEspiaActual = World->SpawnActor<ANaveEnemigaEspia>(ubicacionActual, rotacionNave);
 			TANavesEnemigasEspia.Add(NaveEnemigaEspiaActual);
