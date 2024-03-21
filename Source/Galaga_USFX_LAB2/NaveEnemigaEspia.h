@@ -39,7 +39,7 @@ public:
 	FORCEINLINE void SetTipoLaser(float _tipoLaser) { tipoLaser = _tipoLaser; }
 	FORCEINLINE void SetTiempoCargaSigilo(float _tiempoCargaSigilo) { tiempoCargaSigilo = _tiempoCargaSigilo; }
 	
-protected:
+public:
 	ANaveEnemigaEspia();
 
 protected:

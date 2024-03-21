@@ -7,15 +7,21 @@ ANaveEnemigaHacker::ANaveEnemigaHacker()
 {
 	static ConstructorHelpers::FObjectFinder<UStaticMesh> malla(TEXT("StaticMesh'/Game/StarterContent/Shapes/Shape_NarrowCapsule.Shape_NarrowCapsule'"));
 	mallaNaveEnemiga->SetStaticMesh(malla.Object);
+	nombre= "NaveEnemigaHacker";
 }
 
 void ANaveEnemigaHacker::BeginPlay()
 {
+		Super::BeginPlay(); 
+	//velocidad = -100;
+	ubicacionActual = GetActorLocation();
 
 }
 
 void ANaveEnemigaHacker::Tick(float DeltaTime)
-{
+{ 
+	Super::Tick(DeltaTime);
+	Mover(DeltaTime);	
 }
 
 void ANaveEnemigaHacker::Mover(float DeltaTime)

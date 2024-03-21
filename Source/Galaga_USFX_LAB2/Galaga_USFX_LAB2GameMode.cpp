@@ -43,9 +43,9 @@ void AGalaga_USFX_LAB2GameMode::BeginPlay()
 			}
 
 			TMapCambiarVelocidad.Add(nombreNave04, NaveEnemigaHackerActual);
-			TMapCambiarVelocidad[nombreNave04]->GetVelocidad();
-			TMapCambiarVelocidad[nombreNave04]->SetVelocidad(70);
-
+			TMapCambiarVelocidad[nombreNave04]->GetVelocidad();//acceder
+			TMapCambiarVelocidad[nombreNave04]->SetVelocidad(90);//cambiar
+			
 
 
 		}
