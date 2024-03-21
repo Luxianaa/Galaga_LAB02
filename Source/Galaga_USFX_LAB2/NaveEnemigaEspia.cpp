@@ -27,7 +27,7 @@ void ANaveEnemigaEspia::Mover(float DeltaTime)
 	FVector PosicionActual = GetActorLocation();
 
 	//Angulo += Speed * DeltaTime;
-	float NuevaX = FMath::RandRange(-20.0f, 80.0f) * DeltaTime / 1000.0f;
+	float NuevaX = FMath::RandRange(-20.0f, 80.0f) * DeltaTime;
 	float NuevaY = FMath::RandRange(-20.0f, 80.0f) * DeltaTime / 1000.0f;
 	float NuevaZ = FMath::RandRange(-20.0f, 80.0f) * DeltaTime;
 

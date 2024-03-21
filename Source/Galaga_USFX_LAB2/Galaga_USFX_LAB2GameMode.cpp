@@ -17,7 +17,7 @@ AGalaga_USFX_LAB2GameMode::AGalaga_USFX_LAB2GameMode()
 void AGalaga_USFX_LAB2GameMode::BeginPlay()
 {
 	Super::BeginPlay();
-	FVector ColocacionInicialNaves = FVector(-500.0f, 50.0f, 270.f);
+	FVector ColocacionInicialNaves = FVector(-600.0f, -200.0f, 270.f);
 	FVector ubicacionInicialNaves02 = FVector(700.0f, 10.0f, 200.0f); 
 	FVector ubicacionInicialNaves = FVector(100.0f, -20.0f, 200.f);
 	FRotator rotacionNave = FRotator(0.0f, 0.0f, 0.0f);
@@ -27,9 +27,9 @@ void AGalaga_USFX_LAB2GameMode::BeginPlay()
 	{
 		FVector ColocacionActual = ColocacionInicialNaves;
 		FVector ubicacionActual = ubicacionInicialNaves;
-		for (int i = 0; i < 7; i++) {
+		for (int i = 0; i < 5; i++) {
 
-			ColocacionActual = FVector(ColocacionActual.X + 250, ColocacionActual.Y + i, ColocacionActual.Z);
+			ColocacionActual = FVector(ColocacionActual.X  , ColocacionActual.Y + 300 , ColocacionActual.Z);
 			ANaveEnemigaHacker* NaveEnemigaHackerActual = World->SpawnActor<ANaveEnemigaHacker>(ColocacionActual, rotacionNave);
 			TANavesEnemigas.Add(NaveEnemigaHackerActual);
 
@@ -44,7 +44,7 @@ void AGalaga_USFX_LAB2GameMode::BeginPlay()
 
 			TMapCambiarVelocidad.Add(nombreNave04, NaveEnemigaHackerActual);
 			TMapCambiarVelocidad[nombreNave04]->GetVelocidad();//acceder
-			TMapCambiarVelocidad[nombreNave04]->SetVelocidad(90);//cambiar
+			TMapCambiarVelocidad[nombreNave04]->SetVelocidad(100);//cambiar
 			
 
 
