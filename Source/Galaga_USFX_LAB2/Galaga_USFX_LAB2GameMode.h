@@ -28,6 +28,7 @@ public:
 	TArray<ANaveEnemigaEspia*> TANavesEnemigasEspia;
 	TArray<ANaveEnemigaTransporte*>TANavesEnemigasTransporte;
 	//TMap<int32, TArray<ANaveEnemigaCaza*>> ColumnaNavesEnemigasCaza;
+	TMap<FString, ANaveEnemiga*>TMapCambiarVelocidad;
 };
 
 

@@ -6,6 +6,7 @@
 #include "NaveEnemigaCaza.h"
 #include "NaveEnemigaEspia.h"
 #include "NaveEnemigaTransporte.h"
+#include "NaveEnemigaHacker.h"
 
 AGalaga_USFX_LAB2GameMode::AGalaga_USFX_LAB2GameMode()
 {
@@ -16,36 +17,7 @@ AGalaga_USFX_LAB2GameMode::AGalaga_USFX_LAB2GameMode()
 void AGalaga_USFX_LAB2GameMode::BeginPlay()
 {
 	Super::BeginPlay();
-
-	//const int32 NumeroDeColumnas = 5;
-	//const int32 NumeroDeFilas = 5;
-
-	//for (int32 Columna = 0; Columna < NumeroDeColumnas; ++Columna)
-	//{
-	//	TArray<ANaveEnemigaCaza*>NavesEnColumna;
-	//	for (int32 Fila = 0; Fila < NumeroDeFilas;++Fila) 
-	//	{ 
-	//		FVector SpawnLocation = FVector(Columna * 200.0f,Fila *200.0f, 350.0f);
-	//		FRotator SpwanRotation = FRotator::ZeroRotator;
-
-	//		ANaveEnemigaCaza* NuevaNaveCaza = GetWorld()->SpawnActor<ANaveEnemigaCaza>(SpawnLocation, SpwanRotation);
-	//		if (NuevaNaveCaza)
-	//		{
-	//			//
-	//		}
-	//		else
-	//		{
-	//			UE_LOG(LogTemp, Error, TEXT("No se puede crear NE caza. "));
-
-	//		}
-	//		NavesEnColumna.Add(NuevaNaveCaza);
-
-	//	}
-	//	ColumnaNavesEnemigasCaza.Add(Columna, NavesEnColumna);
-
-	//	
-	//	
-	//}
+	FVector ColocacionInicialNaves = FVector(-500.0f, 50.0f, 270.f);
 	FVector ubicacionInicialNaves02 = FVector(700.0f, 10.0f, 200.0f); 
 	FVector ubicacionInicialNaves = FVector(100.0f, -20.0f, 200.f);
 	FRotator rotacionNave = FRotator(0.0f, 0.0f, 0.0f);
@@ -53,13 +25,35 @@ void AGalaga_USFX_LAB2GameMode::BeginPlay()
 	UWorld* const World = GetWorld();
 	if (World != nullptr)
 	{
+		FVector ColocacionActual = ColocacionInicialNaves;
 		FVector ubicacionActual = ubicacionInicialNaves;
+		for (int i = 0; i < 7; i++) {
+
+			ColocacionActual = FVector(ColocacionActual.X + 250, ColocacionActual.Y + i, ColocacionActual.Z);
+			ANaveEnemigaHacker* NaveEnemigaHackerActual = World->SpawnActor<ANaveEnemigaHacker>(ColocacionActual, rotacionNave);
+			TANavesEnemigas.Add(NaveEnemigaHackerActual);
+
+			FString nombre04 = NaveEnemigaHackerActual->GetNombre();
+
+			FString nombreNave04 = FString::Printf(TEXT("%s %d"), *nombre04, i);
+			//Mensaje en pantalla
+			if (GEngine)
+			{
+				GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, nombreNave04);
+			}
+
+			TMapCambiarVelocidad.Add(nombreNave04, NaveEnemigaHackerActual);
+			TMapCambiarVelocidad[nombreNave04]->GetVelocidad();
+			TMapCambiarVelocidad[nombreNave04]->SetVelocidad(70);
+
+
+
+		}
 		for (int i = 0; i < 5; i++) {
 			ubicacionActual = FVector(ubicacionActual.X, ubicacionActual.Y + 300.0f + i, ubicacionActual.Z);
 			ANaveEnemigaCaza* NaveEnemigaCazaActual = World->SpawnActor<ANaveEnemigaCaza>(ubicacionActual, rotacionNave);
 			TANavesEnemigasCaza.Add(NaveEnemigaCazaActual);
-			//DiferenciaNaves.Add("Nave01", NaveEnemigaCazaActual);
-			//DiferenciaNaves["Nave01"]->SetVelocidad(100);
+			
 		}
 		ubicacionInicialNaves.Y = ubicacionInicialNaves.Y - 100.0f ;
 		for (int j = 0; j < 5; j++) {
@@ -80,6 +74,9 @@ void AGalaga_USFX_LAB2GameMode::BeginPlay()
 				TANavesEnemigasTransporte.Add(NaveEnemigaTransporteActual); 
 
 			}
+
+
+
 	}
 }
 

@@ -11,6 +11,7 @@ ANaveEnemigaHacker::ANaveEnemigaHacker()
 
 void ANaveEnemigaHacker::BeginPlay()
 {
+
 }
 
 void ANaveEnemigaHacker::Tick(float DeltaTime)
@@ -19,4 +20,14 @@ void ANaveEnemigaHacker::Tick(float DeltaTime)
 
 void ANaveEnemigaHacker::Mover(float DeltaTime)
 {
+	ubicacionActual = GetActorLocation();
+	float NuevaX = velocidad * DeltaTime + ubicacionActual.X;
+	FVector NuevaPosicion = FVector(NuevaX, ubicacionActual.Y, ubicacionActual.Z);
+	SetActorLocation(NuevaPosicion); 
+    /*velocidad = -100;
+    ubicacionActual = GetActorLocation();
+    float NuevaX = velocidad * DeltaTime + ubicacionActual.X;
+    FVector NuevaPosicion = FVector(NuevaX, ubicacionActual.Y, ubicacionActual.Z);
+    SetActorLocation(NuevaPosicion);*/
+
 }

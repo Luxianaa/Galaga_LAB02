@@ -26,6 +26,7 @@ protected:
 	float tiempoReaparicion;
 	FString nombre;
 	FVector posicion;
+	FVector ubicacionActual;
 public: //accessory Methods
 	FORCEINLINE float GetVelocidad() const { return velocidad; }
 	FORCEINLINE float GetVelocidadDisparo() const { return velocidadDisparo; }
