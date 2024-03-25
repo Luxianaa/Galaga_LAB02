@@ -22,6 +22,9 @@ protected:
 	float puntaje;
 	float tipoLaser;
 	float tiempoCargaSigilo;
+	float Radio = 200.0f; // Radio de la circunferencia
+	float Angulo = 0.0f; // Ángulo inicial
+	float Speed = 6.0f; // Velocidad de rotación
 public:
 	FORCEINLINE float GetTiempoSigilo() const { return tiempoSigilo; }
 	FORCEINLINE float GetTiempoInvisible() const { return tiempoInvisible; }
@@ -50,6 +53,11 @@ public:
 	virtual void Tick(float DeltaTime) override;
 	virtual void Mover(float DeltaTime);
 
+private:
+	float VelocidadMovimiento;
+
+private:
+	int DireccionMovimientoVertical;
 
 
 
