@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Galaga_USFX_LAB2.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{3F3E289C-173D-40F4-A82D-00D65FB28A63}</UniqueIdentifier>
+      <UniqueIdentifier>{E57B8A93-FE6E-46F0-8CE1-13A800059006}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Galaga_USFX_LAB2.Target.cs">
       <Filter>Source</Filter>
@@ -14,7 +14,7 @@
     <None Include="..\..\.gitattributes" />
     <None Include="..\..\.gitignore" />
     <Filter Include="Config">
-      <UniqueIdentifier>{8E415491-3E0E-4720-8B11-1FD2700B3DBD}</UniqueIdentifier>
+      <UniqueIdentifier>{D872161C-678C-4B20-8428-91F6C6515037}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -32,8 +32,14 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Galaga_USFX_LAB2">
-      <UniqueIdentifier>{94C0C345-C483-4B20-825B-A42555D16E1F}</UniqueIdentifier>
+      <UniqueIdentifier>{94C3AC96-429F-44A8-AFB0-8D32AE29EB0F}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Galaga_USFX_LAB2\AComponenteMovimiento.cpp">
+      <Filter>Source\Galaga_USFX_LAB2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Galaga_USFX_LAB2\AComponenteMovimiento.h">
+      <Filter>Source\Galaga_USFX_LAB2</Filter>
+    </ClInclude>
     <None Include="..\..\Source\Galaga_USFX_LAB2\Galaga_USFX_LAB2.Build.cs">
       <Filter>Source\Galaga_USFX_LAB2</Filter>
     </None>

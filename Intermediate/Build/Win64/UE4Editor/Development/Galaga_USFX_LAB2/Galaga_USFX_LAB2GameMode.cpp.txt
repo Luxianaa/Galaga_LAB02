@@ -14,6 +14,8 @@ C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\In
 C:\Program Files\Epic Games\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
 C:\Users\lucia\Desktop\Trabajos Unreal\Galaga_USFX_LAB2\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB2\Galaga_USFX_LAB2Pawn.generated.h
 C:\Users\lucia\Desktop\Trabajos Unreal\Galaga_USFX_LAB2\Source\Galaga_USFX_LAB2\NaveEnemiga.h
+C:\Users\lucia\Desktop\Trabajos Unreal\Galaga_USFX_LAB2\Source\Galaga_USFX_LAB2\AComponenteMovimiento.h
+C:\Users\lucia\Desktop\Trabajos Unreal\Galaga_USFX_LAB2\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB2\AComponenteMovimiento.generated.h
 C:\Users\lucia\Desktop\Trabajos Unreal\Galaga_USFX_LAB2\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB2\NaveEnemiga.generated.h
 C:\Users\lucia\Desktop\Trabajos Unreal\Galaga_USFX_LAB2\Source\Galaga_USFX_LAB2\NaveEnemigaCaza.h
 C:\Users\lucia\Desktop\Trabajos Unreal\Galaga_USFX_LAB2\Intermediate\Build\Win64\UE4Editor\Inc\Galaga_USFX_LAB2\NaveEnemigaCaza.generated.h

@@ -21,21 +21,10 @@ protected:
 public:
 	ANaveEnemigaHacker();
 
-
-protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
-
 public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 	//Herencia de NaveEnemiga
 	virtual void Mover(float DeltaTime);
-private:
-	float VelocidadMovimiento;
-
-private:
-	int DireccionMovimientoVertical;
-
 };

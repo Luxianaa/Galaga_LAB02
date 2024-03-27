@@ -4,9 +4,10 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "AComponenteMovimiento.h"
 #include "NaveEnemiga.generated.h"
 
-UCLASS(ABSTRACT)
+UCLASS()
 class GALAGA_USFX_LAB2_API ANaveEnemiga : public AActor
 {
 	GENERATED_BODY()
@@ -27,6 +28,12 @@ protected:
 	FString nombre;
 	FVector posicion;
 	FVector ubicacionActual;
+	float Radio = 200.0f; // Radio de la circunferencia
+	float Angulo = 0.0f; // Ángulo inicial
+	float Speed = 6.0f; // Velocidad de rotación
+
+	UAComponenteMovimiento* MovimientoNavesComponent; 
+
 public: //accessory Methods
 	FORCEINLINE float GetVelocidad() const { return velocidad; }
 	FORCEINLINE float GetVelocidadDisparo() const { return velocidadDisparo; }

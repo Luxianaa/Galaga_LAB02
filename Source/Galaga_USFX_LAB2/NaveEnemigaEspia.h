@@ -45,19 +45,11 @@ public:
 public:
 	ANaveEnemigaEspia();
 
-protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
 
 public:
 	virtual void Tick(float DeltaTime) override;
 	virtual void Mover(float DeltaTime);
 
-private:
-	float VelocidadMovimiento;
-
-private:
-	int DireccionMovimientoVertical;
 
 
 

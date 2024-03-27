@@ -4,9 +4,11 @@
 
 #include "CoreMinimal.h"
 #include "NaveEnemiga.h"
+//#include "AComponenteMovimiento.h"
 #include "NaveEnemigaCaza.generated.h"
 
-/**
+
+/**z
  * 
  */
 UCLASS()
@@ -37,10 +39,6 @@ public:
 
 public:
 	ANaveEnemigaCaza();
-
-protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
 
 public:
 	// Called every frame

@@ -9,9 +9,7 @@ ANaveEnemigaCurandera::ANaveEnemigaCurandera()
 	mallaNaveEnemiga->SetStaticMesh(malla.Object);
 }
 
-void ANaveEnemigaCurandera::BeginPlay()
-{
-}
+
 
 void ANaveEnemigaCurandera::Tick(float DeltaTime)
 {

@@ -40,13 +40,13 @@ void AGalaga_USFX_LAB2GameMode::BeginPlay()
 
 		// Spawn de Naves Enemigas de tipo Transporte
 		for (int j = 0; j < 5; j++) {
-			ubicacionActual.Y = ubicacionInicialNaves.Y + 300.0f * (float)j;
+			ubicacionActual.Y = ubicacionInicialNaves.Y + 300.0f * j;
 			ANaveEnemigaTransporte* NaveEnemigaTransporteActual = World->SpawnActor<ANaveEnemigaTransporte>(ubicacionActual, rotacionNave);
 			TANavesEnemigasTransporte.Add(NaveEnemigaTransporteActual);
 		}
 		ubicacionActual.X = ubicacionInicialNaves.X - 500.0f;
 		for (int i = 0; i < 5; i++) {
-			ubicacionActual.Y = ubicacionInicialNaves.Y + 300.0f * i;
+			ubicacionActual.Y = ubicacionInicialNaves.Y + 300.0f * i ;
 		    ANaveEnemigaHacker* NaveEnemigaHackerActual = World->SpawnActor<ANaveEnemigaHacker>(ubicacionActual, rotacionNave);
 			TANavesEnemigas.Add(NaveEnemigaHackerActual);
 		}
